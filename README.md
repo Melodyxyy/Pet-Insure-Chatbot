@@ -25,9 +25,10 @@ Kindly be noted: Currently, only the secure website content is available here, a
 
 ## How to Use
 
-1. Visit our website at https://github.com/Melodyxyy/Pet-Insure-Chatbot 
-3. Interact with the chatbot to access information about pet insurance plans, coverage, and more.
-4. Follow the prompts to explore different features and get your questions answered.
+1. Download XAMPP and install.
+2. Visit our website at https://github.com/Melodyxyy/Pet-Insure-Chatbot to downlaod to file folder htdoc in Xampp.
+3. Open XAMPP and start Apache and MySQL.
+4. Open the website: http://localhost/PetInsure/Index.html
 
 ## Installation
 
