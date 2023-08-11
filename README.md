@@ -26,7 +26,7 @@ Kindly be noted: Currently, only the secure website content is available here, a
 ## How to Use
 
 1. Download XAMPP and install.
-2. Visit our website at https://github.com/Melodyxyy/Pet-Insure-Chatbot to downlaod to file folder htdoc in Xampp.
+2. Visit our website at https://github.com/Melodyxyy/Pet-Insure-Chatbot to downlaod all files to the file folder htdoc in Xampp.
 3. Open XAMPP and start Apache and MySQL.
 4. Open the website: http://localhost/PetInsure/Index.html
 
