@@ -6,12 +6,23 @@
 
 This conversational AI chatbot serves as a comprehensive resource for pet owners seeking insights into pet insurance plans, coverage options, claims processes, and frequently asked questions. Our goal is to empower pet owners to make informed decisions about their pets' insurance needs through this user-friendly and informative chatbot.
 
+Kindly be noted: Currently, only the secure website content is available here, and some code is yet to be finalized before uploading.
+
 ## Features
 
-- Interactive chatbot interface for easy communication.
+User Registration: New users can easily register on the website to access a range of features.
+Chatbot Interaction: Users can engage in interactive conversations with the chatbot to receive information about pet insurance plans, coverage options, claims processes, and FAQs.
+Quote Application: New users can apply for insurance quotes through the chatbot.
+Claim Submission: Registered users can submit insurance claims through the website.
+Claim List: Existing users can view their claim history and check the status of ongoing claims.
+User Profile: User information and policy details are securely stored for easy access.
+
+Interactive chatbot interface for easy communication.
 - Information about various pet insurance plans and coverage options.
 - Step-by-step guide to the claims process.
 - Answers to frequently asked questions about pet insurance.
+
+
 
 ## How to Use
 
@@ -21,7 +32,7 @@ This conversational AI chatbot serves as a comprehensive resource for pet owners
 
 ## Installation
 
-No installation is required to use the chatbot. Simply access the website link and start interacting with the chatbot.
+For clients, no installation is required to use the chatbot. Simply access the website link and start interacting with the chatbot.
 
 ## Mentor
 
