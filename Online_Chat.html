@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Chat</title>
+    <style>
+      /* Body styles */
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #857c2e;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* nav styles */
+
+        nav {
+            background-color: #555411;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff9900;
+        }
+
+        /* Main content styles */
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-box {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+
+        .user-input-section {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .user-input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .send-button {
+            background-color: #ff9900;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .send-button:hover {
+            background-color: #ffbf00;
+        }
+
+      .cta-button {
+          display: inline-block;
+          background-color: #ff9900;
+          color: #fff;
+          padding: 0.8rem 2rem;
+          font-size: 1.2rem;
+          border: none;
+          cursor: pointer;
+          text-decoration: none;
+      }
+
+      .cta-button:hover {
+          background-color: #ffbf00;
+      }
+
+      footer {
+          background-color: #555411;
+          color: #fff;
+          text-align: center;
+          padding: 1rem;
+      }
+  </style>
+ 
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+    $(document).ready(function() {
+        $(".send-button").click(function() {
+            var userInput = $(".user-input").val();
+            var apiUrl = "http://localhost/PetInsure/local-proxy.php";
+
+            $.ajax({
+                url: apiUrl,
+                type: "POST",
+                data: JSON.stringify({ userInput: userInput }),
+                contentType: "application/json",
+                success: function(response) {
+                    var chatbox = $(".chat-box");
+                    chatbox.append("<p><strong>You:</strong> " + userInput + "</p>");
+                    chatbox.append("<p><strong>Bot:</strong> " + response.botResponse + "</p>");
+
+                    chatbox.scrollTop(chatbox[0].scrollHeight);
+                },
+                error: function(error) {
+                    console.error("Error:", error);
+                }
+            });
+        });
+    });
+   </script>
+  </head>
+  <body>
+      <header>
+        <h1>Online Chat</h1>
+        <p>Your furry friend's protection is our priority.</p>
+      </header>
+      <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Dog_Insurance.html">Dog Insurance</a></li>
+            <li><a href="Cat_Insurance.html">Cat Insurance</a></li>
+            <li><a href="Online_Chat.html">Online Chat</a></li>
+            <li><a href="Claims.html">Claims</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="Contact_us.html">Contact us</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+ 
+    <main>
+
+        <div class="chat-container">
+            <h1>Online Chat</h1>
+            <p>Welcome to our online chat service. How can we assist you today?</p>
+            <div class="chat-box">
+                <!-- Chatbox content will be displayed here -->
+            </div>
+            <div class="user-input-section">
+                <input type="text" class="user-input" placeholder="Type your message">
+                <button class="send-button">Send</button>
+            </div>
+        </div>
+
+    </main>
+    
+
+          <br>
+      <footer>
+               <!-- Footer content-->
+          <div class="large-4 columns">
+            <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+          </div>
+      </footer>
+  </body>
+</html>

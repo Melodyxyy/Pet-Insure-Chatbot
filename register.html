@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+      /* Body styles */
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #857c2e;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* nav styles */
+
+        nav {
+            background-color: #555411;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff9900;
+        }
+
+        /* Main content styles */
+        main {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-form {
+            margin-top: 2rem;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background-color: #ff9900;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffbf00;
+        }
+
+      footer {
+          background-color: #555411;
+          color: #fff;
+          text-align: center;
+          padding: 1rem;
+      }
+  </style>
+  </head>
+  <body>
+      <header>
+        <h1>Login</h1>
+        <p>Sign in to your account.</p>
+      </header>
+      <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Dog_Insurance.html">Dog Insurance</a></li>
+            <li><a href="Cat_Insurance.html">Cat Insurance</a></li>
+            <li><a href="Online_Chat.html">Online Chat</a></li>
+            <li><a href="Claims.html">Claims</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="Contact_us.html">Contact us</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Register</h1>
+        <form action="register.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+    
+            <label for="membership">Membership Level:</label>
+            <select id="membership" name="membership">
+                <option value="Basic">Basic</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+                <option value="Platinum">Platinum</option>
+            </select><br>
+    
+            <label for="pet_names">Pet Names (comma-separated):</label>
+            <input type="text" id="pet_names" name="pet_names"><br>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <span id="passwordInfo" style="color: red;"></span><br>
+    
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+
+        <script>
+            function validatePassword() {
+                var passwordInput = document.getElementById("password");
+                var password = passwordInput.value;
+    
+                if (!password.match(/^(?=.*[A-Z])(?=.*[^a-zA-Z]).{8,}$/)) {
+                    document.getElementById("passwordInfo").textContent = "Password must contain at least one uppercase letter, one non-letter character, and be at least 8 characters long.";
+                    return false; // Prevent form submission
+                }
+    
+                return true; // Allow form submission
+            }
+        </script>
+        
+    </main>
+    <br>
+    <br>
+
+  
+    <footer>
+        <!-- Footer content-->
+    <div class="large-4 columns">
+     <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+    </div>
+   </footer>
+</body>
+</html>

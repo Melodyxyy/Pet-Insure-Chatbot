@@ -1,0 +1,4 @@
+Install XAMPP
+Download the documents and copy to the file folder "htdoc"
+
+http://localhost/PetInsure/Index.html
