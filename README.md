@@ -10,14 +10,13 @@ Kindly be noted: Currently, only the secure website content is available here, a
 
 ## Features
 
-User Registration: New users can easily register on the website to access a range of features.
-Chatbot Interaction: Users can engage in interactive conversations with the chatbot to receive information about pet insurance plans, coverage options, claims processes, and FAQs.
-Quote Application: New users can apply for insurance quotes through the chatbot.
-Claim Submission: Registered users can submit insurance claims through the website.
-Claim List: Existing users can view their claim history and check the status of ongoing claims.
-User Profile: User information and policy details are securely stored for easy access.
-
-Interactive chatbot interface for easy communication.
+- User Registration: New users can easily register on the website to access a range of features.
+- Chatbot Interaction: Users can engage in interactive conversations with the chatbot to receive information about pet insurance plans, coverage options, - - - claims processes, and FAQs.
+- Quote Application: New users can apply for insurance quotes through the chatbot.
+- Claim Submission: Registered users can submit insurance claims through the website.
+- Claim List: Existing users can view their claim history and check the status of ongoing claims.
+- User Profile: User information and policy details are securely stored for easy access.
+- Interactive chatbot interface for easy communication.
 - Information about various pet insurance plans and coverage options.
 - Step-by-step guide to the claims process.
 - Answers to frequently asked questions about pet insurance.
