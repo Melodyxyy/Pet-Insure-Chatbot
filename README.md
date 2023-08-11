@@ -15,7 +15,7 @@ This conversational AI chatbot serves as a comprehensive resource for pet owners
 
 ## How to Use
 
-1. Visit our website at [https://github.com/your-username/Pet-Insure-Chatbot](https://github.com/your-username/Pet-Insure-Chatbot).
+1. Visit our website at [https://github.com/Melodyxyy/Pet-Insure-Chatbot](https://github.com/Melodyxyy/Pet-Insure-Chatbot).
 2. Interact with the chatbot to access information about pet insurance plans, coverage, and more.
 3. Follow the prompts to explore different features and get your questions answered.
 
