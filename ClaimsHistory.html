@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Chat</title>
+    <title>Pet Insurance</title>
     <style>
       /* Body styles */
       body {
@@ -59,35 +59,35 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       }
 
-      .chat-container {
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 2rem;
-        background-color: #fff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
       }
 
-      .chat-box {
-        border: 1px solid #ccc;
-        padding: 1rem;
-        max-height: 300px;
-        overflow-y: scroll;
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
       }
 
-      .user-input-section {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: space-between;
+      .claims-form {
+        margin-top: 2rem;
       }
 
-      .user-input {
-        flex: 1;
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
         padding: 0.5rem;
         border: 1px solid #ccc;
         border-radius: 5px;
       }
 
-      .send-button {
+      button {
         background-color: #ff9900;
         color: #fff;
         padding: 0.5rem 1rem;
@@ -96,8 +96,35 @@
         cursor: pointer;
       }
 
-      .send-button:hover {
+      button:hover {
         background-color: #ffbf00;
+      }
+
+      /* Insurance options styles */
+      #insurance-options {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .hero-section {
+        background-image: url('1.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #e2e839;
+        text-align: center;
+        padding: 5rem 0;
+        height: 500px;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
       }
 
       .cta-button {
@@ -122,36 +149,11 @@
         padding: 1rem;
       }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function() {
-            $(".send-button").click(function() {
-              var userInput = $(".user-input").val();
-              var apiUrl = "http://localhost/PetInsure/local-proxy.php";
-              $.ajax({
-                url: apiUrl,
-                type: "POST",
-                data: JSON.stringify({
-                  userInput: userInput
-                }),
-                contentType: "application/json",
-                success: function(response) {
-                  var chatbox = $(".chat-box");
-                  chatbox.append(" < p > < strong > You: < /strong> " + userInput + " < /p>");
-                    chatbox.append(" < p > < strong > Bot: < /strong> " + response.botResponse + " < /p>");
-                      chatbox.scrollTop(chatbox[0].scrollHeight);
-                    }, error: function(error) {
-                      console.error("Error:", error);
-                    }
-                  });
-              });
-            });
-    </script>
   </head>
   <body>
     <header>
-      <h1>Online Chat</h1>
-      <p>Your furry friend's protection is our priority.</p>
+      <h1>Claims</h1>
+      <p>Submit your insurance claims here.</p>
     </header>
     <nav>
       <ul>
@@ -179,24 +181,37 @@
         <li>
           <a href="Login.html">Login</a>
         </li>
-      </ul>
     </nav>
     <main>
-      <div class="chat-container">
-        <h1>Online Chat</h1>
-        <p>Welcome to our online chat service. How can we assist you today?</p>
-        <div class="chat-box">
-          <!-- Chatbox content will be displayed here -->
-        </div>
-        <div class="user-input-section">
-          <input type="text" class="user-input" placeholder="Type your message">
-          <button class="send-button">Send</button>
-        </div>
+      <div class="container">
+        <h2>Claims History</h2>
+        <p>View and manage your insurance claims history:</p>
+        <ul id="claimsList">
+          <!-- Claims list will be populated dynamically -->
+        </ul>
       </div>
-    </main>
-    <br>
+      <script>
+        // Fetch and display claims history
+        fetch("get_claims_history.php").then(response => response.json()).then(data => {
+          const claimsList = document.getElementById("claimsList");
+  
+          data.forEach(claim => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `
+              <strong>Claim Date:</strong> ${claim.claim_date}<br>
+              <strong>Pet Name:</strong> ${claim.pet_name}<br>
+              <strong>Claim Details:</strong> ${claim.claim_details}<br>
+              <br>
+            `;
+            claimsList.appendChild(listItem);
+          });
+        }).catch(error => {
+          console.error("Error fetching claims history:", error);
+        });
+      </script>
+    </main>  
     <footer>
-      <!-- Footer content-->
+      <!-- Footer content -->
       <div class="large-4 columns">
         <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
       </div>

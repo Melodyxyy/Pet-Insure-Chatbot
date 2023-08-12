@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,165 +7,178 @@
     <style>
       /* Body styles */
       body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
 
-        /* Header styles */
-        header {
-            background-color: #857c2e;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
+      /* Header styles */
+      header {
+        background-color: #857c2e;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
 
-        /* nav styles */
+      /* nav styles */
+      nav {
+        background-color: #555411;
+        text-align: center;
+        padding: 1rem 0;
+      }
 
-        nav {
-            background-color: #555411;
-            text-align: center;
-            padding: 1rem 0;
-        }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
+      nav ul li a:hover {
+        color: #ff9900;
+      }
 
-        nav ul li a:hover {
-            color: #ff9900;
-        }
+      /* Main content styles */
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
 
-        /* Main content styles */
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
+      /* Chatbox styles */
+      #chatbox {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        background-color: #f9f9f9;
+        height: 300px;
+        overflow-y: auto;
+      }
 
-        /* Chatbox styles */
-        #chatbox {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            background-color: #f9f9f9;
-            height: 300px;
-            overflow-y: auto;
-        }
-
-        /* Insurance options styles */
-        #insurance-options {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: space-around;
-        }
-
+      /* Insurance options styles */
+      #insurance-options {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+      }
 
       .hero-section {
-          background-image: url('1.jpg');
-          background-size: cover;
-          background-position: center;
-          color: #fdfdfd;
-          text-align: center;
-          padding: 5rem 0;
-          height: 500px;
+        background-image: url('1.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fdfdfd;
+        text-align: center;
+        padding: 5rem 0;
+        height: 500px;
       }
 
       .hero-section h1 {
-          font-size: 3rem;
-          margin-bottom: 1rem;
+        font-size: 3rem;
+        margin-bottom: 1rem;
       }
 
       .hero-section p {
-          font-size: 1.2rem;
-          margin-bottom: 2rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
       }
 
       .cta-button {
-          display: inline-block;
-          background-color: #ff9900;
-          color: #fff;
-          padding: 0.8rem 2rem;
-          font-size: 1.2rem;
-          border: none;
-          cursor: pointer;
-          text-decoration: none;
+        display: inline-block;
+        background-color: #ff9900;
+        color: #fff;
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
       }
 
       .cta-button:hover {
-          background-color: #ffbf00;
+        background-color: #ffbf00;
       }
 
       footer {
-          background-color: #555411;
-          color: #fff;
-          text-align: center;
-          padding: 1rem;
+        background-color: #555411;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
       }
-  </style>
+    </style>
   </head>
   <body>
-      <header>
-        <h1>Welcome to Pet Insurance!</h1>
-        <p>Your furry friend's protection is our priority.</p>
-      </header>
-      <nav>
-        <ul>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="Dog_Insurance.html">Dog Insurance</a></li>
-            <li><a href="Cat_Insurance.html">Cat Insurance</a></li>
-            <li><a href="Online_Chat.html">Online Chat</a></li>
-            <li><a href="Claims.html">Claims</a></li>
-            <li><a href="FAQs.html">FAQs</a></li>
-            <li><a href="Contact_us.html">Contact us</a></li>
-            <li><a href="Login.html">Login</a></li>
-        </ul>
+    <header>
+      <h1>Welcome to Pet Insurance!</h1>
+      <p>Your furry friend's protection is our priority.</p>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="Index.html">Home</a>
+        </li>
+        <li>
+          <a href="Dog_Insurance.html">Dog Insurance</a>
+        </li>
+        <li>
+          <a href="Cat_Insurance.html">Cat Insurance</a>
+        </li>
+        <li>
+          <a href="Online_Chat.html">Online Chat</a>
+        </li>
+        <li>
+          <a href="Claims.html">Claims</a>
+        </li>
+        <li>
+          <a href="FAQs.html">FAQs</a>
+        </li>
+        <li>
+          <a href="Contact_us.html">Contact us</a>
+        </li>
+        <li>
+          <a href="Login.html">Login</a>
+        </li>
+      </ul>
     </nav>
-      <main>
-        <section class="hero-section">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <h1>Get Peace of Mind with Pet Insurance</h1>
-          <br>
-          <br>          
-          <br>
-          <br>
-          <p>Protect your beloved pets with comprehensive insurance coverage.</p>
-          <br>
-          <br>
-          <a class="cta-button" href="Get_Quote.html">Get a Quote</a>
-        </section>
-      </main>
-  
-      <footer>
-          <!-- Footer content -->
-          <div class="large-4 columns">
-            <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
-          </div>
-      </footer>
+    <main>
+      <section class="hero-section">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Get Peace of Mind with Pet Insurance</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Protect your beloved pets with comprehensive insurance coverage.</p>
+        <br>
+        <br>
+        <a class="cta-button" href="Get_Quote.html">Get a Quote</a>
+      </section>
+    </main>
+    <footer>
+      <!-- Footer content -->
+      <div class="large-4 columns">
+        <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+      </div>
+    </footer>
   </body>
 </html>

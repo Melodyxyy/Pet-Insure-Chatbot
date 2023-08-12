@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 1);
+ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
 session_start();
@@ -13,11 +13,12 @@ if ($conn->connect_error) {
 }
 
 // Get registration info from session
-$registrationInfo = $_SESSION["registrationInfo"] ?? array();
+$registrationInfo = $_SESSION["registrationInfo"] ?? [];
 
 // Fetch additional info from the database using prepared statement
 $username = $registrationInfo["username"] ?? "";
-$query = "SELECT email, membership_level, pet_names FROM users WHERE username = ?";
+$query =
+    "SELECT email, membership_level, pet_names FROM users WHERE username = ?";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("s", $username);
 $stmt->execute();

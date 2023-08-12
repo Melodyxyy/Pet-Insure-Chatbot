@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,156 +7,165 @@
     <style>
       /* Body styles */
       body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
 
-        /* Header styles */
-        header {
-            background-color: #857c2e;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
+      /* Header styles */
+      header {
+        background-color: #857c2e;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
 
-        /* nav styles */
+      /* nav styles */
+      nav {
+        background-color: #555411;
+        text-align: center;
+        padding: 1rem 0;
+      }
 
-        nav {
-            background-color: #555411;
-            text-align: center;
-            padding: 1rem 0;
-        }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
+      nav ul li a:hover {
+        color: #ff9900;
+      }
 
-        nav ul li a:hover {
-            color: #ff9900;
-        }
+      /* Main content styles */
+      main {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
 
-        /* Main content styles */
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
+      .insurance-details {
+        margin-top: 2rem;
+        border-top: 1px solid #ccc;
+        padding-top: 2rem;
+      }
 
-        .insurance-details {
-            margin-top: 2rem;
-            border-top: 1px solid #ccc;
-            padding-top: 2rem;
-        }
+      /* Chatbox styles */
+      #chatbox {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        background-color: #f9f9f9;
+        height: 300px;
+        overflow-y: auto;
+      }
 
-        /* Chatbox styles */
-        #chatbox {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            background-color: #f9f9f9;
-            height: 300px;
-            overflow-y: auto;
-        }
+      img {
+        max-width: 100%;
+        height: auto;
+        max-height: 700px;
+        /* Limit image height if needed */
+      }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            max-height: 700px; /* Limit image height if needed */
-        }
-
-        /* Insurance options styles */
-        #insurance-options {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: space-around;
-        }
+      /* Insurance options styles */
+      #insurance-options {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+      }
 
       footer {
-          background-color: #555411;
-          color: #fff;
-          text-align: center;
-          padding: 1rem;
+        background-color: #555411;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
       }
-  </style>
+    </style>
   </head>
-
   <body>
-      <header>
-        <h1>Dog Insurance</h1>
-        <p>Your furry friend's protection is our priority.</p>
-      </header>
-      <nav>
-        <ul>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="Dog_Insurance.html">Dog Insurance</a></li>
-            <li><a href="Cat_Insurance.html">Cat Insurance</a></li>
-            <li><a href="Online_Chat.html">Online Chat</a></li>
-            <li><a href="Claims.html">Claims</a></li>
-            <li><a href="FAQs.html">FAQs</a></li>
-            <li><a href="Contact_us.html">Contact us</a></li>
-            <li><a href="Login.html">Login</a></li>
-        </ul>
+    <header>
+      <h1>Dog Insurance</h1>
+      <p>Your furry friend's protection is our priority.</p>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="Index.html">Home</a>
+        </li>
+        <li>
+          <a href="Dog_Insurance.html">Dog Insurance</a>
+        </li>
+        <li>
+          <a href="Cat_Insurance.html">Cat Insurance</a>
+        </li>
+        <li>
+          <a href="Online_Chat.html">Online Chat</a>
+        </li>
+        <li>
+          <a href="Claims.html">Claims</a>
+        </li>
+        <li>
+          <a href="FAQs.html">FAQs</a>
+        </li>
+        <li>
+          <a href="Contact_us.html">Contact us</a>
+        </li>
+        <li>
+          <a href="Login.html">Login</a>
+        </li>
+      </ul>
     </nav>
-      
-    
-        <main>
-            <h2>Dog Insurance</h2>
-            <p>Our dog insurance plans provide comprehensive coverage for your canine companions. Whether it's accidents, illnesses, or routine check-ups, our plans are designed to give you peace of mind.</p>
-            <h3>What does Dog Insurance cover?</h3>
-            <p>Dog Insurance offers cover for up to 80% of eligible vet costs associated with your best mate’s specified accidental injuries, and for costs associated with illness. You’ll also have cover for emergency boarding, and access to optional cover for routines such as tick control and obedience training.</p>
-            <div class="insurance-details">
-                <h3>Key Coverage Benefits:</h3>
-                <ul>
-                    <li>Accident and injury coverage</li>
-                    <li>Illness coverage</li>
-                    <li>Emergency medical care</li>
-                    <li>Routine check-ups and vaccinations</li>
-                </ul>
-            </div>
-
-            <div class="insurance-details">
-                <h3>Check out our dog insurance options</h3>
-                <img src="Dog_Insurance.webp" alt="Dog Insurance">
-                <p>Protect your furry friend with our comprehensive dog insurance plans. We understand that your dog is an important part of your family, and their health and well-being matter to you.</p>
-                <p>Our dog insurance policies provide coverage for a wide range of situations, including accidents, illnesses, and preventive care. With customizable plans and affordable premiums, you can choose the coverage that suits your dog's needs and your budget.</p>
-                <p>Don't wait until it's too late. Ensure your dog's health and get peace of mind with our reliable dog insurance plans. Contact us today to learn more and get started!</p>
-
-            </div>
-
-        </main>
-
-      <footer>
-          <!-- Footer content -->
-          <div class="large-4 columns">
-            <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
-          </div>
-      </footer>
+    <main>
+      <h2>Dog Insurance</h2>
+      <p>Our dog insurance plans provide comprehensive coverage for your canine companions. Whether it's accidents, illnesses, or routine check-ups, our plans are designed to give you peace of mind.</p>
+      <h3>What does Dog Insurance cover?</h3>
+      <p>Dog Insurance offers cover for up to 80% of eligible vet costs associated with your best mate’s specified accidental injuries, and for costs associated with illness. You’ll also have cover for emergency boarding, and access to optional cover for routines such as tick control and obedience training.</p>
+      <div class="insurance-details">
+        <h3>Key Coverage Benefits:</h3>
+        <ul>
+          <li>Accident and injury coverage</li>
+          <li>Illness coverage</li>
+          <li>Emergency medical care</li>
+          <li>Routine check-ups and vaccinations</li>
+        </ul>
+      </div>
+      <div class="insurance-details">
+        <h3>Check out our dog insurance options</h3>
+        <img src="Dog_Insurance.webp" alt="Dog Insurance">
+        <p>Protect your furry friend with our comprehensive dog insurance plans. We understand that your dog is an important part of your family, and their health and well-being matter to you.</p>
+        <p>Our dog insurance policies provide coverage for a wide range of situations, including accidents, illnesses, and preventive care. With customizable plans and affordable premiums, you can choose the coverage that suits your dog's needs and your budget.</p>
+        <p>Don't wait until it's too late. Ensure your dog's health and get peace of mind with our reliable dog insurance plans. Contact us today to learn more and get started!</p>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer content -->
+      <div class="large-4 columns">
+        <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+      </div>
+    </footer>
   </body>
 </html>

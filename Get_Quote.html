@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,153 +7,166 @@
     <style>
       /* Body styles */
       body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
 
-        /* Header styles */
-        header {
-            background-color: #857c2e;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
+      /* Header styles */
+      header {
+        background-color: #857c2e;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
 
-        /* nav styles */
+      /* nav styles */
+      nav {
+        background-color: #555411;
+        text-align: center;
+        padding: 1rem 0;
+      }
 
-        nav {
-            background-color: #555411;
-            text-align: center;
-            padding: 1rem 0;
-        }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
+      nav ul li a:hover {
+        color: #ff9900;
+      }
 
-        nav ul li a:hover {
-            color: #ff9900;
-        }
+      /* Main content styles */
+      main {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
 
-        /* Main content styles */
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
+      h1,
+      h2,
+      h3 {
+        font-weight: bold;
+      }
 
-        h1, h2, h3 {
-            font-weight: bold;
-        }
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
+      .quote-form {
+        margin-top: 2rem;
+      }
 
-        .quote-form {
-            margin-top: 2rem;
-        }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
 
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
+      input[type="text"],
+      select,
+      input[type="number"] {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+      }
 
-        input[type="text"], select, input[type="number"] {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-        }
+      button {
+        background-color: #ff9900;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-        button {
-            background-color: #ff9900;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+      button:hover {
+        background-color: #ffbf00;
+      }
 
-        button:hover {
-            background-color: #ffbf00;
-        }
-
-       footer {
-          background-color: #555411;
-          color: #fff;
-          text-align: center;
-          padding: 1rem;
-        }
-  </style>
+      footer {
+        background-color: #555411;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+    </style>
   </head>
   <body>
-      <header>
-        <h1>Get a Quote</h1>
-        <p>Fill out the form below to get a personalized insurance quote.</p>
-      </header>
-      <nav>
-        <ul>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="Dog_Insurance.html">Dog Insurance</a></li>
-            <li><a href="Cat_Insurance.html">Cat Insurance</a></li>
-            <li><a href="Online_Chat.html">Online Chat</a></li>
-            <li><a href="Claims.html">Claims</a></li>
-            <li><a href="FAQs.html">FAQs</a></li>
-            <li><a href="Contact_us.html">Contact us</a></li>
-            <li><a href="Login.html">Login</a></li>
-        </ul>
+    <header>
+      <h1>Get a Quote</h1>
+      <p>Fill out the form below to get a personalized insurance quote.</p>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="Index.html">Home</a>
+        </li>
+        <li>
+          <a href="Dog_Insurance.html">Dog Insurance</a>
+        </li>
+        <li>
+          <a href="Cat_Insurance.html">Cat Insurance</a>
+        </li>
+        <li>
+          <a href="Online_Chat.html">Online Chat</a>
+        </li>
+        <li>
+          <a href="Claims.html">Claims</a>
+        </li>
+        <li>
+          <a href="FAQs.html">FAQs</a>
+        </li>
+        <li>
+          <a href="Contact_us.html">Contact us</a>
+        </li>
+        <li>
+          <a href="Login.html">Login</a>
+        </li>
+      </ul>
     </nav>
-     
-    <main>      
-        <form class="quote-form" action="process_quote.php" method="post">
-            <!-- Form fields -->
-            <label for="pet-type">Select Pet Type:</label>
-            <select id="pet-type" name="pet-type" required>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="other">Other</option>
-            </select>
-        
-            <label for="pet-name">Pet Name:</label>
-            <input type="text" id="pet-name" name="pet-name" required>
-        
-            <label for="age">Pet Age:</label>
-            <input type="number" id="age" name="age" required>
-        
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-        
-            <button type="submit">Get Quote</button>
-        </form>
+    <main>
+      <form class="quote-form" action="process_quote.php" method="post">
+        <!-- Form fields -->
+        <label for="pet-type">Select Pet Type:</label>
+        <select id="pet-type" name="pet-type" required>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="pet-name">Pet Name:</label>
+        <input type="text" id="pet-name" name="pet-name" required>
+        <label for="age">Pet Age:</label>
+        <input type="number" id="age" name="age" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Get Quote</button>
+      </form>
     </main>
-
-      <footer>
-          <!-- Footer content-->
-          <div class="large-4 columns">
-            <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
-          </div>
-      </footer>
+    <footer>
+      <!-- Footer content-->
+      <div class="large-4 columns">
+        <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+      </div>
+    </footer>
   </body>
 </html>
