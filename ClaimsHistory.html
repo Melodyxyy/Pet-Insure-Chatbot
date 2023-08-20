@@ -3,213 +3,92 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Insurance</title>
-    <style>
-      /* Body styles */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-
-      /* Header styles */
-      header {
-        background-color: #857c2e;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      /* nav styles */
-      nav {
-        background-color: #555411;
-        text-align: center;
-        padding: 1rem 0;
-      }
-
-      nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      nav ul li {
-        display: inline;
-        margin-right: 20px;
-      }
-
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: color 0.3s;
-      }
-
-      nav ul li a:hover {
-        color: #ff9900;
-      }
-
-      /* Main content styles */
-      main {
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 2rem;
-        background-color: #fff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .claims-form {
-        margin-top: 2rem;
-      }
-
-      label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-      }
-
-      input[type="text"],
-      textarea {
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      button {
-        background-color: #ff9900;
-        color: #fff;
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: #ffbf00;
-      }
-
-      /* Insurance options styles */
-      #insurance-options {
-        margin-top: 2rem;
-        display: flex;
-        justify-content: space-around;
-      }
-
-      .hero-section {
-        background-image: url('1.jpg');
-        background-size: cover;
-        background-position: center;
-        color: #e2e839;
-        text-align: center;
-        padding: 5rem 0;
-        height: 500px;
-      }
-
-      .hero-section h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-
-      .hero-section p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-      }
-
-      .cta-button {
-        display: inline-block;
-        background-color: #ff9900;
-        color: #fff;
-        padding: 0.8rem 2rem;
-        font-size: 1.2rem;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
-      .cta-button:hover {
-        background-color: #ffbf00;
-      }
-
-      footer {
-        background-color: #555411;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-      }
-    </style>
+    <title>Pet Insurance Claim History</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/PetInsure/CSS/styles.css">
   </head>
   <body>
     <header>
-      <h1>Claims</h1>
-      <p>Submit your insurance claims here.</p>
+      <h1>Claims History</h1>
     </header>
     <nav>
       <ul>
         <li>
-          <a href="Index.html">Home</a>
+          <a href="Index.html">
+            <button>Home</button>
+          </a>
         </li>
         <li>
-          <a href="Dog_Insurance.html">Dog Insurance</a>
+          <div class="dropdown">
+            <button>Insurance Policy</button>
+            <div class="dropdown-options">
+              <a href="Dog_Insurance.html">Dog Insurance</a>
+              <a href="Cat_Insurance.html">Cat Insurance</a>
+            </div>
+          </div>
         </li>
         <li>
-          <a href="Cat_Insurance.html">Cat Insurance</a>
+          <a href="Online_Chat.html">
+            <button>Online Chat</button>
+          </a>
         </li>
         <li>
-          <a href="Online_Chat.html">Online Chat</a>
+          <a href="Claims.html">
+            <button>Claims</button>
+          </a>
         </li>
         <li>
-          <a href="Claims.html">Claims</a>
+          <a href="FAQs.html">
+            <button>FAQs</button>
+          </a>
         </li>
         <li>
-          <a href="FAQs.html">FAQs</a>
+          <a href="Contact_us.html">
+            <button>Contact us</button>
+          </a>
         </li>
         <li>
-          <a href="Contact_us.html">Contact us</a>
+          <div class="dropdown">
+            <button>Account</button>
+            <div class="dropdown-options">
+              <a href="Login.html">Login</a>
+              <a href="http://localhost/PetInsure/PHP/logout.php">Signout</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <a href="Login.html">Login</a>
-        </li>
+      </ul>
     </nav>
     <main>
       <div class="container">
         <h2>Claims History</h2>
         <p>View and manage your insurance claims history:</p>
         <ul id="claimsList">
-          <!-- Claims list will be populated dynamically -->
+          <!-- Claims list will be populated dynamically using JavaScript -->
         </ul>
       </div>
       <script>
         // Fetch and display claims history
-        fetch("get_claims_history.php").then(response => response.json()).then(data => {
-          const claimsList = document.getElementById("claimsList");
-  
-          data.forEach(claim => {
-            const listItem = document.createElement("li");
-            listItem.innerHTML = `
-              <strong>Claim Date:</strong> ${claim.claim_date}<br>
-              <strong>Pet Name:</strong> ${claim.pet_name}<br>
-              <strong>Claim Details:</strong> ${claim.claim_details}<br>
-              <br>
-            `;
-            claimsList.appendChild(listItem);
+        const userId = <?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 'null'; ?>;
+        fetch(`../PHP/get_claims_history.php?id=${userId}`)
+          .then(response => response.json())
+          .then(data => {
+            const claimsList = document.getElementById("claimsList");
+      
+            data.forEach(claim => {
+              const listItem = document.createElement("li");
+              listItem.innerHTML = `
+                <strong>Claim Date:</strong> ${claim.claim_date}<br>
+                <strong>Pet Name:</strong> ${claim.pet_name}<br>
+                <strong>Claim Details:</strong> ${claim.claim_details}<br>
+                <br>
+              `;
+              claimsList.appendChild(listItem);
+            });
+          })
+          .catch(error => {
+            console.error("Error fetching claims history:", error);
           });
-        }).catch(error => {
-          console.error("Error fetching claims history:", error);
-        });
       </script>
-    </main>  
+    </main>
     <footer>
       <!-- Footer content -->
       <div class="large-4 columns">

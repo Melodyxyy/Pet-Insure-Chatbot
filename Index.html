@@ -4,175 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Insurance</title>
-    <style>
-      /* Body styles */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-
-      /* Header styles */
-      header {
-        background-color: #857c2e;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      /* nav styles */
-      nav {
-        background-color: #555411;
-        text-align: center;
-        padding: 1rem 0;
-      }
-
-      nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      nav ul li {
-        display: inline;
-        margin-right: 20px;
-      }
-
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: color 0.3s;
-      }
-
-      nav ul li a:hover {
-        color: #ff9900;
-      }
-
-      /* Main content styles */
-      main {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 2rem;
-        background-color: #fff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Chatbox styles */
-      #chatbox {
-        border: 1px solid #ccc;
-        padding: 1rem;
-        background-color: #f9f9f9;
-        height: 300px;
-        overflow-y: auto;
-      }
-
-      /* Insurance options styles */
-      #insurance-options {
-        margin-top: 2rem;
-        display: flex;
-        justify-content: space-around;
-      }
-
-      .hero-section {
-        background-image: url('1.jpg');
-        background-size: cover;
-        background-position: center;
-        color: #fdfdfd;
-        text-align: center;
-        padding: 5rem 0;
-        height: 500px;
-      }
-
-      .hero-section h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-
-      .hero-section p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-      }
-
-      .cta-button {
-        display: inline-block;
-        background-color: #ff9900;
-        color: #fff;
-        padding: 0.8rem 2rem;
-        font-size: 1.2rem;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
-      .cta-button:hover {
-        background-color: #ffbf00;
-      }
-
-      footer {
-        background-color: #555411;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="http://localhost/PetInsure/CSS/styles.css">
   </head>
   <body>
     <header>
       <h1>Welcome to Pet Insurance!</h1>
-      <p>Your furry friend's protection is our priority.</p>
     </header>
     <nav>
       <ul>
         <li>
-          <a href="Index.html">Home</a>
+          <a href="Index.html">
+            <button>Home</button>
+          </a>
         </li>
         <li>
-          <a href="Dog_Insurance.html">Dog Insurance</a>
+          <div class="dropdown">
+            <button>Insurance Policy</button>
+            <div class="dropdown-options">
+              <a href="Dog_Insurance.html">Dog Insurance</a>
+              <a href="Cat_Insurance.html">Cat Insurance</a>
+            </div>
+          </div>
         </li>
         <li>
-          <a href="Cat_Insurance.html">Cat Insurance</a>
+          <a href="Online_Chat.html">
+            <button>Online Chat</button>
+          </a>
         </li>
         <li>
-          <a href="Online_Chat.html">Online Chat</a>
+          <a href="Claims.html">
+            <button>Claims</button>
+          </a>
         </li>
         <li>
-          <a href="Claims.html">Claims</a>
+          <a href="FAQs.html">
+            <button>FAQs</button>
+          </a>
         </li>
         <li>
-          <a href="FAQs.html">FAQs</a>
+          <a href="Contact_us.html">
+            <button>Contact us</button>
+          </a>
         </li>
         <li>
-          <a href="Contact_us.html">Contact us</a>
-        </li>
-        <li>
-          <a href="Login.html">Login</a>
+          <div class="dropdown">
+            <button>Account</button>
+            <div class="dropdown-options">
+              <a href="Login.html">Login</a>
+              <a href="../PHP/logout.php">Signout</a>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>
     <main>
       <section class="hero-section">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <h1>Get Peace of Mind with Pet Insurance</h1>
-        <br>
-        <br>
-        <br>
-        <br>
         <p>Protect your beloved pets with comprehensive insurance coverage.</p>
-        <br>
         <br>
         <a class="cta-button" href="Get_Quote.html">Get a Quote</a>
       </section>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <a href="Cat_Insurance.html">
+            <img src="../Pictures/Cat1.jpg" style="width:100%">
+          </a>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <a href="Dog_Insurance.html">
+            <img src="../Pictures/Dog1.jpg" style="width:100%">
+          </a>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <a href="Cat_Insurance.html">
+            <img src="../Pictures/Cat2.jpg" style="width:100%">
+          </a>
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+          setTimeout(showSlides, 1200); // Change image every 1.2 seconds
+        }
+      </script>
     </main>
     <footer>
       <!-- Footer content -->

@@ -4,129 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Insurance</title>
-    <style>
-      /* Body styles */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-
-      /* Header styles */
-      header {
-        background-color: #857c2e;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      /* nav styles */
-      nav {
-        background-color: #555411;
-        text-align: center;
-        padding: 1rem 0;
-      }
-
-      nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      nav ul li {
-        display: inline;
-        margin-right: 20px;
-      }
-
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: color 0.3s;
-      }
-
-      nav ul li a:hover {
-        color: #ff9900;
-      }
-
-      /* Main content styles */
-      main {
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 2rem;
-        background-color: #fff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .insurance-details {
-        margin-top: 2rem;
-        border-top: 1px solid #ccc;
-        padding-top: 2rem;
-      }
-
-      /* Insurance options styles */
-      #insurance-options {
-        margin-top: 2rem;
-        display: flex;
-        justify-content: space-around;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        max-height: 700px;
-        /* Limit image height if needed */
-      }
-
-      footer {
-        background-color: #555411;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="http://localhost/PetInsure/CSS/styles.css">
   </head>
   <body>
     <header>
       <h1>Cat Insurance</h1>
-      <p>Your furry friend's protection is our priority.</p>
     </header>
     <nav>
       <ul>
         <li>
-          <a href="Index.html">Home</a>
+          <a href="Index.html">
+            <button>Home</button>
+          </a>
         </li>
         <li>
-          <a href="Dog_Insurance.html">Dog Insurance</a>
+          <div class="dropdown">
+            <button>Insurance Policy</button>
+            <div class="dropdown-options">
+              <a href="Dog_Insurance.html">Dog Insurance</a>
+              <a href="Cat_Insurance.html">Cat Insurance</a>
+            </div>
+          </div>
         </li>
         <li>
-          <a href="Cat_Insurance.html">Cat Insurance</a>
+          <a href="Online_Chat.html">
+            <button>Online Chat</button>
+          </a>
         </li>
         <li>
-          <a href="Online_Chat.html">Online Chat</a>
+          <a href="Claims.html">
+            <button>Claims</button>
+          </a>
         </li>
         <li>
-          <a href="Claims.html">Claims</a>
+          <a href="FAQs.html">
+            <button>FAQs</button>
+          </a>
         </li>
         <li>
-          <a href="FAQs.html">FAQs</a>
+          <a href="Contact_us.html">
+            <button>Contact us</button>
+          </a>
         </li>
         <li>
-          <a href="Contact_us.html">Contact us</a>
-        </li>
-        <li>
-          <a href="Login.html">Login</a>
+          <div class="dropdown">
+            <button>Account</button>
+            <div class="dropdown-options">
+              <a href="Login.html">Login</a>
+              <a href="../PHP/logout.php">Signout</a>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>
@@ -136,17 +63,15 @@
       <h3>What does Cat Insurance cover?</h3>
       <p>Depending on which cover you choose, Cat Insurance can offer you up to 80% of eligible vet costs back if your cat suffers a Specified Accidental Injury or illness. You’ll also have cover for home vet visits, emergency boarding, and access to optional cover for routines such as desexing and teeth cleaning.</p>
       <div class="insurance-details">
+        <img src="../Pictures/Cat_Insurance.jpg" alt="Cat Insurance">
         <h3>Key Coverage Benefits:</h3>
-        <ul>
-          <li>Accident and injury coverage</li>
-          <li>Illness coverage</li>
-          <li>Emergency medical care</li>
-          <li>Routine check-ups and vaccinations</li>
-        </ul>
+        <P>Accident and injury coverage</P>
+        <P>Illness coverage</P>
+        <P>Emergency medical care</P>
+        <P>Routine check-ups and vaccinations</P>
       </div>
       <div class="insurance-details">
         <h3>Top 5 things to know about cat insurance</h3>
-        <img src="Cat_Insurance.jpg" alt="Cat Insurance">
         <p>
           <strong>Cover for felines of all ages</strong>
           <br>Cats can be insured from six weeks into their senior years.
