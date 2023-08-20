@@ -1,15 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-// Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "PetInsure";
-
-// Create a connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Include Configuration File
+require_once('config.php');
 
 // Check the connection
 if ($conn->connect_error) {
@@ -18,24 +9,65 @@ if ($conn->connect_error) {
 
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $petName = $_POST["pet"];
-    $claimDetails = $_POST["claim-details"];
+    // Validate and sanitize user inputs
+    $name = trim($_POST["name"]);
+    $petName = trim($_POST["pet"]);
+    $claimDetails = trim($_POST["claim-details"]);
+    $id = trim($_POST["id"]); // Get the user ID from session or wherever it's stored
 
-    // Insert data into the database
-    $sql = "INSERT INTO claims (name, pet_name, claim_details) VALUES (?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $name, $petName, $claimDetails);
-
-    if ($stmt->execute()) {
-        echo "Claim submitted successfully.";
+    // Validate the user ID
+    if (!isValidUserID($id)) {
+        echo "Please enter a valid user ID.";
+    } else if (!doesUserExist($id)) {
+        echo "User with ID $id does not exist.";
     } else {
-        echo "Error: " . $stmt->error;
+        // Basic input validation
+        if (empty($name) || empty($petName) || empty($claimDetails)) {
+            echo "All fields are required.";
+        } else {
+            // Insert data into the database using prepared statement
+            $sql = "INSERT INTO claims (id, name, pet_name, claim_details) VALUES (?, ?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            
+            // Bind parameters
+            $stmt->bind_param("isss", $id, $name, $petName, $claimDetails);
+            
+            if ($stmt->execute()) {
+                echo "Claim submitted successfully.";
+                echo '<br>';
+                echo '<br>';
+                echo '<a href="../html/Index.html">Return to Homepage</a>'; // Add a link to return to the homepage
+                echo '<br>';
+                echo '<br>';
+                echo '<a href="../html/Claims.html">Submit Another Claim</a>'; // Add a link to submit another claim
+            } else {
+                echo "Error: " . $stmt->error;
+            }
+            
+            $stmt->close();
+        }
     }
-
-    $stmt->close();
+} else {
+    echo "Invalid request.";
 }
 
 // Close the connection
 $conn->close();
+
+// Function to validate user ID
+function isValidUserID($id) {
+    // Check if the ID is a positive integer
+    return (is_numeric($id) && intval($id) > 0);
+}
+
+// Function to check if user exists
+function doesUserExist($id) {
+    global $conn;
+    $sql = "SELECT id FROM users WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $stmt->store_result();
+    return $stmt->num_rows > 0;
+}
 ?>

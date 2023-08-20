@@ -30,11 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["logged_in"] = true;
 
         // Redirect to dashboard
-        header("Location: dashboard.html");
+        header("Location: ../html/dashboard.html");
         exit;
     } else {
         // Redirect back to login with an error parameter
-        header("Location: login.html?error=1");
+        header("Location: ../html/login.html?error=1");
         exit;
     }
 

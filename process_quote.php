@@ -8,15 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $age = $_POST["age"];
     $email = $_POST["email"];
 
-    // Database connection details
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "PetInsure"; 
-    
-    // Create a database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
+    //Include Configuration File
+    require_once('config.php');
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -34,6 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the statement
     if ($stmt->execute()) {
         echo "Quote request submitted successfully!";
+        echo '<br>';
+        echo '<br>';
+        echo '<a href="../html/Index.html">Return to Homepage</a>'; // Add a link to return to the homepage
+        echo '<br>';
+        echo '<br>';
+        echo '<a href="../html/Get_Quote.html">Submit Another Inquiry</a>'; // Add a link to submit another inquiry.
     } else {
         echo "Error: " . $stmt->error;
     }

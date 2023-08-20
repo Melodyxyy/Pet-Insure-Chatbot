@@ -1,11 +1,6 @@
 <?php
-ini_set("display_errors", 1);
-error_reporting(E_ALL);
-
-session_start();
-
-// Create a database connection
-$conn = new mysqli("localhost", "root", "", "PetInsure");
+//Include Configuration File
+require_once('config.php');
 
 // Check connection
 if ($conn->connect_error) {

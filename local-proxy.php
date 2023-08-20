@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+//Include Configuration File
+require_once('config.php');
 
 // Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

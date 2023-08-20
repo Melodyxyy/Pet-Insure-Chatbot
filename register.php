@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     );
 
     // Redirect to dashboard page
-    header("Location: dashboard.html");
+    header("Location: ../html/dashboard.html");
     exit;
 }
 ?>

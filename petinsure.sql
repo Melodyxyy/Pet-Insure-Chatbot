@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2023 at 09:12 AM
+-- Generation Time: Aug 20, 2023 at 03:05 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -28,18 +28,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `claims` (
+  `Submit_id` int(11) NOT NULL,
   `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
   `claim_date` date NOT NULL,
   `pet_name` varchar(50) NOT NULL,
   `claim_details` text DEFAULT NULL,
-  `username` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `membership_level` varchar(20) DEFAULT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
+
 
 --
 -- Table structure for table `contactform`
@@ -54,9 +54,6 @@ CREATE TABLE `contactform` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `contactform`
---
-
 -- --------------------------------------------------------
 
 --
@@ -71,6 +68,11 @@ CREATE TABLE `quotes` (
   `email` varchar(100) NOT NULL,
   `submission_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `quotes`
+--
+
 
 -- --------------------------------------------------------
 
@@ -95,8 +97,8 @@ CREATE TABLE `users` (
 -- Indexes for table `claims`
 --
 ALTER TABLE `claims`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_user_id` (`user_id`);
+  ADD PRIMARY KEY (`Submit_id`),
+  ADD KEY `FK_user_id` (`id`);
 
 --
 -- Indexes for table `contactform`
@@ -124,25 +126,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `claims`
 --
 ALTER TABLE `claims`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Submit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `contactform`
 --
 ALTER TABLE `contactform`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `quotes`
 --
 ALTER TABLE `quotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -152,8 +154,8 @@ ALTER TABLE `users`
 -- Constraints for table `claims`
 --
 ALTER TABLE `claims`
-  ADD CONSTRAINT `FK_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `claims_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `FK_user_id` FOREIGN KEY (`id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `claims_ibfk_1` FOREIGN KEY (`id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -9,14 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    // Database connection details
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "PetInsure"; // Change this to your database name
-
-    // Create a database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    //Include Configuration File
+    require_once('config.php');
 
     // Check connection
     if ($conn->connect_error) {
