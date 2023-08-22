@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote of Pet Insurance</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/PetInsure/CSS/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Get a Quote</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="Index.html">
+            <button>Home</button>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>Insurance Policy</button>
+            <div class="dropdown-options">
+              <a href="Dog_Insurance.html">Dog Insurance</a>
+              <a href="Cat_Insurance.html">Cat Insurance</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="Online_Chat.html">
+            <button>Online Chat</button>
+          </a>
+        </li>
+        <li>
+          <a href="Claims.html">
+            <button>Claims</button>
+          </a>
+        </li>
+        <li>
+          <a href="FAQs.html">
+            <button>FAQs</button>
+          </a>
+        </li>
+        <li>
+          <a href="Contact_us.html">
+            <button>Contact us</button>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>Account</button>
+            <div class="dropdown-options">
+              <a href="Login.html">Login</a>
+              <a href="../PHP/logout.php">Signout</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Get a Quote</h1>
+      <p>Fill out the form below to get a personalized insurance quote.</p>
+      <form class="quote-form" action="../PHP/process_quote.php" method="post">
+        <!-- Form fields -->
+        <label for="pet-type">Select Pet Type:</label>
+        <select id="pet-type" name="pet-type" required>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="pet-name">Pet Name:</label>
+        <input type="text" id="pet-name" name="pet-name" required>
+        <label for="age">Pet Age:</label>
+        <input type="number" id="age" name="age" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Get Quote</button>
+      </form>
+    </main>
+    <footer>
+      <!-- Footer content-->
+      <div class="large-4 columns">
+        <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+      </div>
+    </footer>
+  </body>
+</html>

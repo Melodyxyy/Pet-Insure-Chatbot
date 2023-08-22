@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Owner Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/PetInsure/CSS/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Pet Owner Dashboard</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="Index.html">
+            <button>Home</button>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>Insurance Policy</button>
+            <div class="dropdown-options">
+              <a href="Dog_Insurance.html">Dog Insurance</a>
+              <a href="Cat_Insurance.html">Cat Insurance</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="Online_Chat.html">
+            <button>Online Chat</button>
+          </a>
+        </li>
+        <li>
+          <a href="Claims.html">
+            <button>Claims</button>
+          </a>
+        </li>
+        <li>
+          <a href="FAQs.html">
+            <button>FAQs</button>
+          </a>
+        </li>
+        <li>
+          <a href="Contact_us.html">
+            <button>Contact us</button>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>Account</button>
+            <div class="dropdown-options">
+              <a href="Login.html">Login</a>
+              <a href="../PHP/logout.php">Signout</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h1>Welcome to Your Dashboard</h1>
+        <p>You have successfully registered with the following information:</p>
+        <ul>
+          <li>Username: <span id="username"></span>
+          </li>
+          <li>Email: <span id="email"></span>
+          </li>
+          <li>Membership Level: <span id="membership"></span>
+          </li>
+          <li>Pet Names: <span id="petNames"></span>
+          </li>
+        </ul>
+        <h2>Insurance Information</h2>
+        <p>Here's a summary of your insurance details:</p>
+        <ul>
+          <li>Policy Number: <span id="policyNumber">123456789</span>
+          </li>
+          <li>Start Date: <span id="startDate">2023-08-01</span>
+          </li>
+          <li>End Date: <span id="endDate">2024-08-01</span>
+          </li>
+          <li>Coverage Amount: $ <span id="coverageAmount">10000</span>
+          </li>
+        </ul>
+        <h2>Claims</h2>
+        <p>View and manage your insurance claims:</p>
+        <ul>
+          <li>
+            <a href="ClaimsHistory.html">View Claims History</a>
+          </li>
+          <li>
+            <a href="claims.html">Submit a New Claim</a>
+          </li>
+          <br>
+          <li>
+            <a href="../PHP/logout.php">Log Out</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        // Fetch and display registration info
+        fetch("get_registration_info.php").then(response => response.json()).then(data => {
+          document.getElementById("username").textContent = data.username;
+          document.getElementById("email").textContent = data.email;
+          document.getElementById("membership").textContent = data.membership;
+          document.getElementById("petNames").textContent = data.petNames;
+        }).catch(error => {
+          console.error("Error fetching registration info:", error);
+        });
+      </script>
+    </main>
+    <br>
+    <br>
+    <footer>
+      <!-- Footer content -->
+      <div class="large-4 columns">
+        <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+1. Install XAMPP
+
+2. Download the documents and copy them to the file folder "htdoc".
+
+3. Start MySQL via XAMPP panel
+
+4. Open the link: http://localhost/PetInsure/html/Index.html
