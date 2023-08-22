@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Insurance Claim History</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/PetInsure/CSS/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Claims History</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="Index.html">
+            <button>Home</button>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>Insurance Policy</button>
+            <div class="dropdown-options">
+              <a href="Dog_Insurance.html">Dog Insurance</a>
+              <a href="Cat_Insurance.html">Cat Insurance</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="Online_Chat.html">
+            <button>Online Chat</button>
+          </a>
+        </li>
+        <li>
+          <a href="Claims.html">
+            <button>Claims</button>
+          </a>
+        </li>
+        <li>
+          <a href="FAQs.html">
+            <button>FAQs</button>
+          </a>
+        </li>
+        <li>
+          <a href="Contact_us.html">
+            <button>Contact us</button>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>Account</button>
+            <div class="dropdown-options">
+              <a href="Login.html">Login</a>
+              <a href="http://localhost/PetInsure/PHP/logout.php">Signout</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h2>Claims History</h2>
+        <p>View and manage your insurance claims history:</p>
+        <ul id="claimsList">
+          <!-- Claims list will be populated dynamically using JavaScript -->
+        </ul>
+      </div>
+      <script>
+        // Fetch and display claims history
+        const userId = <?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 'null'; ?>;
+        fetch(`../PHP/get_claims_history.php?id=${userId}`)
+          .then(response => response.json())
+          .then(data => {
+            const claimsList = document.getElementById("claimsList");
+      
+            data.forEach(claim => {
+              const listItem = document.createElement("li");
+              listItem.innerHTML = `
+                <strong>Claim Date:</strong> ${claim.claim_date}<br>
+                <strong>Pet Name:</strong> ${claim.pet_name}<br>
+                <strong>Claim Details:</strong> ${claim.claim_details}<br>
+                <br>
+              `;
+              claimsList.appendChild(listItem);
+            });
+          })
+          .catch(error => {
+            console.error("Error fetching claims history:", error);
+          });
+      </script>
+    </main>
+    <footer>
+      <!-- Footer content -->
+      <div class="large-4 columns">
+        <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+      </div>
+    </footer>
+  </body>
+</html>

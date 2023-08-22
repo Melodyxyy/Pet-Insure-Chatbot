@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Insurance</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/PetInsure/CSS/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="Index.html">
+            <button>Home</button>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>Insurance Policy</button>
+            <div class="dropdown-options">
+              <a href="Dog_Insurance.html">Dog Insurance</a>
+              <a href="Cat_Insurance.html">Cat Insurance</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="Online_Chat.html">
+            <button>Online Chat</button>
+          </a>
+        </li>
+        <li>
+          <a href="Claims.html">
+            <button>Claims</button>
+          </a>
+        </li>
+        <li>
+          <a href="FAQs.html">
+            <button>FAQs</button>
+          </a>
+        </li>
+        <li>
+          <a href="Contact_us.html">
+            <button>Contact us</button>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>Account</button>
+            <div class="dropdown-options">
+              <a href="Login.html">Login</a>
+              <a href="../PHP/logout.php">Signout</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+
+      <div class="contact-form">
+
+        <h2>Contact Form</h2>
+        <p>Feel free to reach out to us with any questions or concerns. You can also use the form below to send us a message:</p>
+        <form action="http://localhost/PetInsure/PHP/process_contact_form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer content -->
+      <div class="large-4 columns">
+        <p class="text-right">Copyright (c) 2023, Pet Secure Pty Ltd.</p>
+      </div>
+    </footer>
+  </body>
+</html>
