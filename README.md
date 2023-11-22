@@ -35,16 +35,14 @@ Kindly be noted: Currently, only the secure website content is available here, a
 
 For clients, no installation is required to use the chatbot. Simply access the website link and start interacting with the chatbot.
 
-## Mentor
-
-- Dr. Arman
 
 ## Contributors
 
+- Meican
+- Arman
 - Ankit
 - Nishika
 - Rajesh
-- Meican
 
 ## Contact
 
